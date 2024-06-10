@@ -1,0 +1,100 @@
+Program teammatches;
+const
+message1='the first competitive match is being played by';
+message2='for the second match we have';
+message3='and for the third and last match we have';
+message4='the champion in these matches is';
+message5='every team gets a different amount of points considering their loss or win,specifiacally for the win gets 2 points and for the loss 1';
+message6='the winning team has scored';
+message7='and has accepted';
+var
+a,b:integer;
+type 
+name=string;
+var
+
+
+team_1,team_2,team_3,team_4,score_1,score_2,score_3,score_4,score_5,score_6,score_7,score_8,score_9,score_10,score_11,score_12:name;
+
+begin
+a:=2;
+b:=1;
+         writeln('please enter your team_1: ');
+        readln(team_1);
+        writeln('please enter your team_2: ');
+        readln(team_2);
+         writeln('please enter your team_3: ');
+        readln(team_3);
+        writeln('please enter your team_4: ');
+        readln(team_4);
+writeln(message5);        
+writeln(message1,' ',team_1,' ','vs',' ',team_2,' ','and',' ',team_3,' ','vs',' ',team_4);
+
+       writeln('enter the score for',' ',team_1,' ','vs',' ',team_2);
+     readln(score_1);  writeln('-');readln(score_2);
+if (score_1>score_2) then 
+ writeln('points for',' ',team_1,' ','is',' ',a,' ','and',' ','points for',team_2,' ','is',' ',b)
+ else writeln('points for',' ',team_1,' ','is',' ',b,' ','and',' ','points for',' ',team_2,' ','is',' ',a);
+ 
+      writeln('enter the score for',' ',team_3,' ','vs',' ',team_4);
+        readln(score_3);  writeln('-');  readln(score_4);
+        if (score_3>score_4) then 
+ writeln('points for',' ',team_3,' ','is',' ',a,' ','and',' ','points for',team_4,' ','is',' ',b)
+ else writeln('points for',' ',team_3,' ','is',' ',b,' ','and',' ','points for',' ',team_4,' ','is',' ',a);
+
+writeln(message2,' ',team_1,' ','vs',' ',team_3,' ','and',' ',team_2,' ','vs',' ',team_4);   
+    writeln('enter the score for',' ',team_1,' ','vs',' ',team_3);
+    readln(score_5);  writeln('-');readln(score_6);
+    if (score_5>score_6) then 
+ writeln('points for',' ',team_1,' ','is',' ',a,' ','and',' ','points for',team_3,' ','is',' ',b)
+ else writeln('points for',' ',team_1,' ','is',' ',b,' ','and',' ','points for',' ',team_3,' ','is',' ',a);
+    
+     writeln('enter the score for',' ',team_2,' ','vs',' ',team_4);
+      readln(score_7);  writeln('-');readln(score_8);
+      if (score_7>score_8) then 
+ writeln('points for',' ',team_2,' ','is',' ',a,' ','and',' ','points for',team_4,' ','is',' ',b)
+ else writeln('points for',' ',team_1,' ','is',' ',b,' ','and',' ','points for',' ',team_2,' ','is',' ',a);
+
+    
+writeln(message3,' ',team_1,' ','vs',' ',team_4,' ','and',' ',team_2,' ','vs',' ',team_3);
+    writeln('enter the score for',' ',team_1,' ','vs',' ',team_4);
+    readln(score_9);  writeln('-');readln(score_10);
+    if (score_9>score_10) then 
+ writeln('points for',' ',team_1,' ','is',' ',a,' ','and',' ','points for',team_4,' ','is',' ',b)
+ else writeln('points for',' ',team_1,' ','is',' ',b,' ','and',' ','points for',' ',team_4,' ','is',' ',a);
+    
+    writeln('enter the score for',' ',team_2,' ','vs',' ',team_3);
+    readln(score_11);  writeln('-');readln(score_12);
+    if (score_11>score_12) then 
+ writeln('points for',' ',team_2,' ','is',' ',a,' ','and',' ','points for',team_4,' ','is',' ',b)
+ else writeln('points for',' ',team_2,' ','is',' ',b,' ','and',' ','points for',' ',team_4,' ','is',' ',a);
+    
+    
+writeln(message4);
+    if(score_1+score_5+score_9>score_2+score_7+score_11) then
+        writeln(team_1);
+        if (score_1+score_5+score_9<score_2+score_7+score_11) then
+        writeln(team_2)
+        else if (score_3+score_6+score_12>score_4+score_8+score_10) then
+        writeln(team_3)
+             else writeln(team_4);
+
+writeln(message6);
+  if(score_1+score_5+score_9>score_2+score_7+score_11) then
+        writeln(score_1+score_5+score_9);
+        if (score_1+score_5+score_9<score_2+score_7+score_11) then
+        writeln(score_2+score_7+score_11)
+        else if (score_3+score_6+score_12>score_4+score_8+score_10) then
+        writeln(score_3+score_6+score_12)
+             else writeln(score_4+score_8+score_10);
+
+writeln(message7);
+ if(score_1+score_5+score_9>score_2+score_7+score_11) then
+        writeln(score_2+score_6+score_10);
+        if (score_1+score_5+score_9<score_2+score_7+score_11) then
+        writeln(score_1+score_8+score_12)
+        else if (score_3+score_6+score_12>score_4+score_8+score_10) then
+        writeln(score_4+score_6+score_11)
+             else writeln(score_3+score_7+score_9); 
+
+end.
